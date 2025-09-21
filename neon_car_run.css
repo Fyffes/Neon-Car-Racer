@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #000428, #004e92, #009ffd);
+    font-family: 'Orbitron', 'Arial', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    color: #00ffff;
+}
+
+.game-container {
+    position: relative;
+    width: 900px;
+    height: 700px;
+    background: linear-gradient(180deg, #001122 0%, #003366 50%, #001122 100%);
+    border: 3px solid #00ffff;
+    border-radius: 15px;
+    box-shadow: 0 0 50px #00ffff, inset 0 0 100px rgba(0, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    background: transparent;
+}
+
+.hud {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    text-shadow: 0 0 10px #00ffff;
+    z-index: 100;
+}
+
+.speedometer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    border: 3px solid #ff0080;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 128, 0.1), transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 15px #ff0080;
+    z-index: 100;
+}
+
+.speed-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.speed-label {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #ff0080;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 0 0 20px #ff0080;
+    z-index: 200;
+    display: none;
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 14px;
+    text-shadow: 0 0 10px #00ffff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.neon-button {
+    background: transparent;
+    border: 2px solid #ff0080;
+    color: #ff0080;
+    padding: 12px 25px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-shadow: 0 0 10px #ff0080;
+    box-shadow: 0 0 25px rgba(255, 0, 128, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.neon-button:hover {
+    background: rgba(255, 0, 128, 0.2);
+    box-shadow: 0 0 40px rgba(255, 0, 128, 0.6);
+    transform: scale(1.05);
+}
+
+.minimap {
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    width: 150px;
+    height: 100px;
+    border: 2px solid #00ffff;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}

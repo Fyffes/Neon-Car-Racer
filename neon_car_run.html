@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Highway Racer</title>
+    <link rel="stylesheet" href="neon_car_run.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="900" height="700"></canvas>
+
+        <div class="hud">
+            <div>Score: <span id="score">0</span></div>
+            <div>Level: <span id="level">1</span></div>
+            <div>Distance: <span id="distance">0</span> km</div>
+            <div>Fuel: <span id="fuel">100</span>%</div>
+        </div>
+
+        <div class="speedometer">
+            <div class="speed-value" id="speedValue">0</div>
+            <div class="speed-label">KM/H</div>
+        </div>
+
+        <canvas id="minimap" class="minimap" width="150" height="100"></canvas>
+
+        <div class="game-over" id="gameOver">
+            <h2>CRASH!</h2>
+            <div>Final Score: <span id="finalScore">0</span></div>
+            <div>Distance: <span id="finalDistance">0</span> km</div>
+            <div>Max Speed: <span id="maxSpeed">0</span> km/h</div>
+            <button class="neon-button" onclick="restartGame()">RESTART RACE</button>
+        </div>
+
+        <div class="controls">
+            <strong>WASD:</strong> Steering | <strong>SHIFT:</strong> Nitro | <strong>SPACE:</strong> Brake | <strong>R:</strong> Restart
+        </div>
+    </div>
+
+    <script src="neon_car_run.js"></script>
+</body>
+</html>
